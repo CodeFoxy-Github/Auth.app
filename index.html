@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <title>Auth.app</title>
 </head>
 <body>
+    <style>
+
+    body {
+        font-family: 'Roboto', sans-serif;
+     }
+
+     </style>
+     
   <!-- Google Auth Script-->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <h1>
@@ -30,6 +37,7 @@
 
   <!-- Google signOut Button-->
 <a href="#" onclick="signOut();">Sign out</a>
+
 <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
