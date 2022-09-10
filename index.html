@@ -19,32 +19,17 @@
    
   <!-- Google Auth Client id Define-->
   <meta name="google-signin-client_id" content="352755537065-gujlfjagahhh7nk019chab6o7tlsas78.apps.googleusercontent.com">
-  
+    <h1>login</h1>
   <!-- Google login Button-->
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
-  
-<script>
-    
-  function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
-</script>
-
+    <h1>logout</h1>
   <!-- Google signOut Button-->
-<a href="#" onclick="signOut();">Sign out</a>
+<div onclick="openInNewTab('www.youtube.com/logout');">logout Chrome and google</div>
 
 <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
+function openInNewTab(url) {
+ window.open(url, '_blank').focus();
+}
 </script>
 </body>
 </html>
