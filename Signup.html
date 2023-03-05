@@ -1,0 +1,52 @@
+<html>
+<link rel="stylesheet" href="style.css">
+
+<body>
+	<section>
+		<div class="color"></div>
+		<div class="color"></div>
+		<div class="color"></div>
+		<div class="box">
+			<div class="square" style="--i:0;"></div>
+			<div class="square" style="--i:1;"></div>
+			<div class="square" style="--i:2;"></div>
+			<div class="square" style="--i:3;"></div>
+			<div class="square" style="--i:4;"></div>
+			<div class="square" style="--i:5;"></div>
+			<div class="container">
+				<div class="form">
+					<h2>Signup</h2>
+					<form>
+						<div class="inputBox">
+							<input id="Email" type="text" placeholder="Email">
+						</div>
+						<div class="inputBox">
+							<input id="password" type="password" placeholder="Password">
+						</div>
+			<div class="inputBox">
+				<input id="password-check" type="password-check" placeholder="Check Password">
+			</div>
+				<h3 id="Message"></h3>
+							<div class="inputBox">
+								<button onclick="Signup()" value="Signup">Signup
+								</button>
+							</div>
+								<p class="forget">Already have an account?
+									<a href="#" onclick="loginurl()">Login</a>
+								</p>
+								<br>
+								
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

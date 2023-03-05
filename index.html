@@ -1,29 +1,42 @@
-<!DOCTYPE html>
-<head>
-    <title>Auth.app</title>
-</head>
-<body>
-    <style>
 
-    body {
-        font-family: 'Roboto', sans-serif;
-     }
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <script src="index.js"></script>
 
-     </style>
-     
-  <!-- Google Auth Script-->
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <h1>
-    Google Auth
-  </h1> 
-   
-  <!-- Google Auth Client id Define-->
-  <meta name="google-signin-client_id" content="352755537065-gujlfjagahhh7nk019chab6o7tlsas78.apps.googleusercontent.com">
-    <h1>login</h1>
-  <!-- Google login Button-->
-  <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <h1>logout</h1>
-  <!-- Google signOut Button-->
-     <button class="btn btn-logout" onclick=" window.open('https://www.youtube.com/logout','_blank')">logout all Google Services</button>
-</body>
-</html>
+
+	<link rel="stylesheet" href="style.css">
+
+
+
+
+
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="box">
+	  <div class="square" style="--i:0;"></div>
+	  <div class="square" style="--i:1;"></div>
+	  <div class="square" style="--i:2;"></div>
+	  <div class="square" style="--i:3;"></div>
+	  <div class="square" style="--i:4;"></div>
+	  <div class="container">
+		<div class="form">
+		  <h2>Login</h2>
+		  <form>
+			<div class="inputBox">
+			  <input type="text" placeholder="Username">
+			</div>
+			<div class="inputBox">
+			  <input type="password" placeholder="Password">
+			</div>
+			<div class="inputBox">
+			  <input type="submit" value="Login">
+			</div>
+			<p class="forget">Forgot password? <a href="/forget.html">Click here</a></p>
+			<p class="forget">Don't have an account? <a href="/Signup.html">Sign up</a></p>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </section>
