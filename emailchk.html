@@ -25,11 +25,16 @@
       <h2>Login Form</h2>
       <form>
         <div class="inputBox">
-          <input type="text" placeholder="Username">
+          <input type="text" placeholder="Verification Code">
         </div>
         <p class="forget">Don't receive the email? <a href="#">Resend</a></p>
     </form>
     </div>
   </div>
 </div>
+<script>
+  let params = curl.searchParams;
+  const emlsda = params.get('email'); // "react"
+  sent(emlsda);
+</script>
 </section>

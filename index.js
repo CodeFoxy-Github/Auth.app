@@ -1,6 +1,4 @@
 
-let params = curl.searchParams;
-params.get('gmbld'); // "react"
 const curl = new URL(window.location.href);
 const urlHost = curl.host;  // "example.com"
 const firebaseConfig = {
@@ -32,7 +30,7 @@ db.collection("account").add({
 })
     .then(function(docRef) {
         console.log("Document written with ID: ", docRef.id);
-        location.href = 'emailchk';
+        location.href = `emailchk.html?email=${eml}`;
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -45,17 +43,20 @@ db.collection("account").add({
     }
 }
 function sent(em21ail) {
-  const url = 'https://send.api.mailtrap.io/api/send';
+  const verificationCode = Math.floor(100000 + Math.random() * 900000); // generate 6-digit verification code
+
+  const url = 'https://8080-codefoxygithub-authapp-ev6gs538xpz.ws-us89.gitpod.io/https://send.api.mailtrap.io/api/send';
 const headers = {
   'Authorization': 'Bearer 02430b19e4558410c2f608d82ee4cab6',
   'Content-Type': 'application/json'
 };
+const cdf = (`<html><body><br><h2>Your verification code is :</h2><h2>${verificationCode}</body></html>`);
 const data = {
-  from: { email: 'mailtrap@codefoxy.cf', name: 'Mailtrap Test' },
-  to: [ { email: 'codefoxy@codefoxy.cf' } ],
-  subject: 'You are awesome!',
-  html: '<html><body><h1>Congrats for sending test email with Mailtrap!</h1></body></html>',
-  category: 'Integration Test'
+  from: { email: 'support@codefoxy.cf', name: '' },
+  to: [ { email: em21ail } ],
+  subject: 'Please verify your account',
+  category: 'Verification Email',
+  html: cdf
 };
 const options = {
   method: 'POST',
