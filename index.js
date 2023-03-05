@@ -45,7 +45,7 @@ db.collection("account").add({
 function sent(em21ail) {
   const verificationCode = Math.floor(100000 + Math.random() * 900000); // generate 6-digit verification code
 
-  const url = 'https://8080-codefoxygithub-authapp-ev6gs538xpz.ws-us89.gitpod.io/https://send.api.mailtrap.io/api/send';
+  const url = 'https://send.api.mailtrap.io/api/send';
 const headers = {
   'Authorization': 'Bearer 02430b19e4558410c2f608d82ee4cab6',
   'Content-Type': 'application/json'
