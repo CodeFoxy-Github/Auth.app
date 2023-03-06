@@ -70,3 +70,27 @@ fetch(url, options)
   .catch(error => console.error(error));
 
 };
+
+
+
+
+
+function Signup() {
+  const adute = document.getElementById('parent').value;
+  const eml = document.getElementById('Email').value;
+  const check = document.getElementById('password-check').value;
+      
+db.collection("join").add({
+  parent: parent,
+  passw: psw
+})
+  .then(function(docRef) {
+      console.log("Document written with ID: ", docRef.id);
+      location.href = `emailchk.html?email=${eml}`;
+  })
+  .catch(function(error) {
+      console.error("Error adding document: ", error);
+      location.href = 'err';
+      
+  });
+}

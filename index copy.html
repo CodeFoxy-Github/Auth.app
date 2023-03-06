@@ -66,7 +66,13 @@
 				</select>
 			</div>
 			<div class="inputBox">
-			  <input type="text" placeholder="（陪同）家長姓名">
+				<select>
+						<option>(選填)是否願意加入兒主家長群組</option>
+						<option>已加入</option>
+						<option>未加入,不想加入</option>
+						<option>未加入,想加入</option>
+				</select>
+			  <input type="text" id="adute" placeholder="(選填)陪同家長姓名">
 			</div>
 			<br>
 			<div id="glass-container">
@@ -78,11 +84,14 @@
 				</div>
 			</div>
 			<div class="inputBox">
-			  <input type="submit" value="發送">	  </form>
+			  <input onclick="sent();" type="kid2" value="發送">		  </form>
 		</div>
 	  </div>
 	</div>
 	<script>function kid2() {
 		document.getElementById('glass-object').innerHTML = '\<div class=\"inputBox\"\>\<input type=\"text\" placeholder=\"兒童姓名\"\>\</div\>\<div class=\"inputBox\"\>\<select\>\<option\>就讀年級\</option\>\<option\>一年級\</option\>\<option\>二年級\</option\>\<option\>三年級\</option\>\<option\>四年級\</option\><option\>五年級\</option\>\<option\>六年級\</option\>\</select\>\</div\>';
 			}	</script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <script src="index.js"></script>
   </section>
