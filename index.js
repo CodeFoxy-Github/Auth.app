@@ -81,10 +81,11 @@ function Signup() {
   const check = document.getElementById('password-check').value;
       
 db.collection("join").add({
-  parent: parent,
-  passw: psw
+  陪同家長姓名: parent,
+  兒童姓名: psw
 })
   .then(function(docRef) {
+    
       console.log("Document written with ID: ", docRef.id);
       location.href = `emailchk.html?email=${eml}`;
   })
