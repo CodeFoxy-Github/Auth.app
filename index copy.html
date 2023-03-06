@@ -1,0 +1,88 @@
+
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
+    <script src="index.js"></script>
+
+
+	<link rel="stylesheet" href="/style copy.css">
+
+
+
+
+
+<section>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="color"></div>
+	<div class="box">
+	  <div class="square" style="--i:0;"></div>
+	  <div class="square" style="--i:1;"></div>
+	  <div class="square" style="--i:2;"></div>
+	  <div class="square" style="--i:3;"></div>
+	  <div class="square" style="--i:4;"></div>
+	  <div class="container">
+		<div class="form">
+		  <h2>家長平安</h2>
+		  <h2>
+			2023年
+			4/9兒童復活節
+			闖關BigDay
+			報名開始囉❤️</h2>
+			<h2>
+			今年我們一樣有
+			吐司彩繪DIY
+			的關卡；做完讓孩子們可以帶回家和家人一起享用
+			
+			今年我們新增加(~)<br>
+			夜市攤位闖關得小糖果
+			
+			<br><br>在這裡您可以重新領受到復活節的意義<br><br>
+			
+			復活節BigDay<br>
+			邀請您來共襄盛舉</h2>
+		  <form>
+			<div id=""></div>
+			<div class="inputBox">
+			  <input type="text" placeholder="兒童姓名">
+			</div>
+			<div class="inputBox">
+					<select>
+						<optgroup label="幼兒園">
+							<option>就讀班級</option>
+							<option>幼幼班(三歲以下)</option>
+							<option>小班</option>
+							<option>中班</option>
+							<option>大班</option>
+						</optgroup>
+						<optgroup label="國小">
+							<option>就讀年級</option>
+							<option>一年級</option>
+							<option>二年級</option>
+							<option>三年級</option>
+							<option>四年級</option>
+							<option>五年級</option>
+							<option>六年級</option>
+						</optgroup>
+				</select>
+			</div>
+			<div class="inputBox">
+			  <input type="text" placeholder="（陪同）家長姓名">
+			</div>
+			<br>
+			<div id="glass-container">
+				<div id="glass-object">
+					<div class="inputBox">
+						<h2>如有第二個兒童要參加</h2>
+					  <input onclick="kid2();" type="kid2" value="請點這">	
+					  </div>
+				</div>
+			</div>
+			<div class="inputBox">
+			  <input type="submit" value="發送">	  </form>
+		</div>
+	  </div>
+	</div>
+	<script>function kid2() {
+		document.getElementById('glass-object').innerHTML = '\<div class=\"inputBox\"\>\<input type=\"text\" placeholder=\"兒童姓名\"\>\</div\>\<div class=\"inputBox\"\>\<select\>\<option\>就讀年級\</option\>\<option\>一年級\</option\>\<option\>二年級\</option\>\<option\>三年級\</option\>\<option\>四年級\</option\><option\>五年級\</option\>\<option\>六年級\</option\>\</select\>\</div\>';
+			}	</script>
+  </section>
