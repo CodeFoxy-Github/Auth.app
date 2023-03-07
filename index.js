@@ -77,12 +77,20 @@ fetch(url, options)
 
 function Signup() {
   const adute = document.getElementById('parent').value;
-  const eml = document.getElementById('Email').value;
+  const name = document.getElementById('name').value;
+  var e = document.getElementById("yxr1");
+  var value = e.value;
+  var text = e.options[e.selectedIndex].text;  
+  console.log(text);
+  console.log(value);
+  const kid2 = document.getElementById('kid2').value;
   const check = document.getElementById('password-check').value;
       
 db.collection("join").add({
-  陪同家長姓名: parent,
-  兒童姓名: psw
+  陪同家長姓名: adute,
+  兒童姓名: name,
+  兒童姓名2: kid2,
+  年級: 
 })
   .then(function(docRef) {
     

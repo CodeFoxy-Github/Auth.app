@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/style copy.css">
 
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <section>
@@ -25,27 +25,35 @@
 		  <h2>家長平安</h2>
 		  <h2>
 			2023年
-			4/9兒童復活節
+			兒童復活節
 			闖關BigDay
 			報名開始囉❤️</h2>
-			<h2>
-			今年我們一樣有
+			<h2><br>活動時間：<br>4/9(日) 8:50-10:50<br>
+				地點：<br>台中市豐原區向陽路269號<br><br>
+				邀請家長8:40帶孩子至4樓後交給兒主老師，再至6樓參加成人主日，成人請10:50再到四樓接孩子<br>
+				  
+			<br>今年我們一樣有
 			吐司彩繪DIY
-			的關卡；做完讓孩子們可以帶回家和家人一起享用
+			的關卡；做完讓孩子們可以帶回家和家人一起享用<br><br>
 			
-			今年我們新增加(~)<br>
+			我們新增加了<br>
 			夜市攤位闖關得小糖果
 			
 			<br><br>在這裡您可以重新領受到復活節的意義<br><br>
 			
 			復活節BigDay<br>
-			邀請您來共襄盛舉</h2>
+			邀請您來共襄盛舉
+	</h2>
+            
+
+
+
 		  <form>
 			<div id=""></div>
 			<div class="inputBox">
-			  <input type="text" placeholder="兒童姓名">
+			  <input id="name" type="text" placeholder="兒童姓名">
 			</div>
-			<div class="inputBox">
+			<div id="yxr1"class="inputBox">
 					<select>
 						<optgroup label="幼兒園">
 							<option>就讀班級</option>
@@ -86,14 +94,19 @@
 				</div>
 			</div>
 			<div class="inputBox">
-			  <input onclick="sent();" type="kid2" value="發送">		  </form>
+			  <input onclick="Signup();" type="kid2" value="發送">		  </form>
 		</div>
 	  </div>
 	</div>
 	<script>function kid2() {
-		document.getElementById('glass-object').innerHTML = '\<div class=\"inputBox\"\>\<input type=\"text\" placeholder=\"兒童姓名\"\>\</div\>\<div class=\"inputBox\"\>\<select\>\<option\>就讀年級\</option\>\<option\>一年級\</option\>\<option\>二年級\</option\>\<option\>三年級\</option\>\<option\>四年級\</option\><option\>五年級\</option\>\<option\>六年級\</option\>\</select\>\</div\>';
+		document.getElementById('glass-object').innerHTML = '\<div class=\"inputBox\"\>\<input type=\"text\" id=\"kid2\"placeholder=\"兒童姓名\"\>\</div\>\<div class=\"inputBox\"\>\<select\>\<option\>就讀年級\</option\>\<option\>一年級\</option\>\<option\>二年級\</option\>\<option\>三年級\</option\>\<option\>四年級\</option\><option\>五年級\</option\>\<option\>六年級\</option\>\</select\>\</div\>';
 			}	</script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
+	-
   </section>
+
+
+
+
