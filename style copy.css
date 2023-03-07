@@ -154,12 +154,12 @@ section .color:nth-child(3){
   background-color: #000000;
 }
 
-.form .inputBox{
+input{
   width: 100%;
   margin-top: 20px;
 }
 
-.form .inputBox input{
+input{
   width: 100%;
   background-color: rgba(255,255,255,0.2);
   border: none;

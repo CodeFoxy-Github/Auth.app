@@ -6,9 +6,13 @@
 
 	<link rel="stylesheet" href="/style copy.css">
 
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	<script>
+		function kid2() {
+        location.href = `join2.html`;
+			}	
+				
+		
+	</script>
 
 <section>
 	<div class="color"></div>
@@ -53,28 +57,28 @@
 			<div class="inputBox">
 			  <input id="name" type="text" placeholder="兒童姓名">
 			</div>
-			<div id="yxr1"class="inputBox">
-					<select>
+			<div class="inputBox">
+					<select id="kid1w">
 						<optgroup label="幼兒園">
-							<option>就讀班級</option>
-							<option>幼幼班(三歲以下)</option>
-							<option>小班</option>
-							<option>中班</option>
-							<option>大班</option>
+							<option value="Not selected">就讀班級</option>
+							<option value="幼幼班">幼幼班(三歲以下)</option>
+							<option value="小班">小班</option>
+							<option value="中班">中班</option>
+							<option value="大班">大班</option>
 						</optgroup>
 						<optgroup label="國小">
-							<option>就讀年級</option>
-							<option>一年級</option>
-							<option>二年級</option>
-							<option>三年級</option>
-							<option>四年級</option>
-							<option>五年級</option>
-							<option>六年級</option>
+							<option value="Not selected">就讀年級</option>
+							<option value="一年級">一年級</option>
+							<option value="二年級">二年級</option>
+							<option value="三年級">三年級</option>
+							<option value="四年級">四年級</option>
+							<option value="五年級">五年級</option>
+							<option value="六年級">六年級</option>
 						</optgroup>
 				</select>
 			</div>
 			<div class="inputBox">
-				<select>
+				<select id="line">
 						<option>(選填)是否願意加入兒主家長群組</option>
 						<option>已加入</option>
 						<option>未加入,我想加入，請與我聯繫</option>
@@ -98,13 +102,32 @@
 		</div>
 	  </div>
 	</div>
-	<script>function kid2() {
-		document.getElementById('glass-object').innerHTML = '\<div class=\"inputBox\"\>\<input type=\"text\" id=\"kid2\"placeholder=\"兒童姓名\"\>\</div\>\<div class=\"inputBox\"\>\<select\>\<option\>就讀年級\</option\>\<option\>一年級\</option\>\<option\>二年級\</option\>\<option\>三年級\</option\>\<option\>四年級\</option\><option\>五年級\</option\>\<option\>六年級\</option\>\</select\>\</div\>';
-			}	</script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
-	-
+	<script>
+		function Signup() {
+		  const adute = document.getElementById('adute').value;
+		  const name = document.getElementById('name').value;
+		  var e = document.getElementById("kid1w");
+		  var value = e.value; 
+		 var line = document.getElementById("line");
+		 var li2ne = line.value;
+		 
+		db.collection("users").add({
+		  陪同家長姓名 : adute,
+		  兒童姓名: name,
+		  年級 : value,
+		  line : li2ne
+		})
+		  .then(function(docRef) {
+			  console.log("Document written with ID: ", docRef.id);
+		  })
+		  .catch(function(error) {
+			  console.error("Error adding document: ", error);
+		  });
+		
+		}</script>
   </section>
 
 
