@@ -28,11 +28,12 @@
     <div class="form">
       <h2>報名成功!</h2>
       <h2 id="id"></h2>
+      <h2>(真的不用記.)</h2>
             <script>
 
 let params = curl.searchParams;
   const emlsda = params.get('id'); // "react"
-  document.getElementById("id").innerHTML = `你的ID:${emlsda}(真的不用記.)`;
+  document.getElementById("id").innerHTML = `你的ID:${emlsda}`;
 </script>
 </section>
 
