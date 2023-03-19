@@ -116,9 +116,9 @@
 		 var line = document.getElementById("line");
 		 var li2ne = line.value;
 		 let check = 1;
-		 if (name !== undefined) {
-        let check = 2;
-		if (value !== undefined) {
+		 if (name !== '') {
+        let check = 2
+		if (value !== '') {
 			if (check == 2) {
 				db.collection("users").add({ 陪同家長姓名 : adute, 兒童姓名: name, 年級 : value, line : li2ne }) .then(function(docRef) { console.log("Document written with ID: ", docRef.id); location.href = `done.html?id=${docRef.id}`; }) .catch(function(error) { console.error("Error adding document: ", error); });
 			}
