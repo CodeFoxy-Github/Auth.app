@@ -56,6 +56,7 @@
 			<div id=""></div>
 			<div class="inputBox">
 			  <input id="name" type="text" placeholder="兒童姓名">
+			  <h3 id="Message"></h3>
 			</div>
 			<div class="inputBox">
 					<select id="kid1w">
@@ -77,6 +78,7 @@
 						</optgroup>
 				</select>
 			</div>
+			<h3 id="Mess1age"></h3>
 			<div class="inputBox">
 				<select id="line">
 						<option>(選填)是否願意加入兒主家長群組</option>
@@ -98,7 +100,7 @@
 				</div>
 			</div>
 			<div class="inputBox">
-			  <input onclick="Signup();" type="kid2" value="發送">		  </form>
+			  <input onclick="Si1gnup();" type="kid2" value="發送">		  </form>
 		</div>
 	  </div>
 	</div>
@@ -106,28 +108,30 @@
     <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-firestore.js"></script>
     <script src="index.js"></script>
 	<script>
-		function Signup() {
+		function Si1gnup() {
 		  const adute = document.getElementById('adute').value;
 		  const name = document.getElementById('name').value;
 		  var e = document.getElementById("kid1w");
 		  var value = e.value; 
 		 var line = document.getElementById("line");
 		 var li2ne = line.value;
-		 
-		db.collection("users").add({
-		  陪同家長姓名 : adute,
-		  兒童姓名: name,
-		  年級 : value,
-		  line : li2ne
-		})
-		  .then(function(docRef) {
-			  console.log("Document written with ID: ", docRef.id);
-        location.href = `done.html?id=${docRef.id}`;
-		  })
-		  .catch(function(error) {
-			  console.error("Error adding document: ", error);
-		  });
-		
+		 let check = 1;
+		 if (name !== undefined) {
+        let check = 2;
+		if (value !== undefined) {
+			if (check == 2) {
+				db.collection("users").add({ 陪同家長姓名 : adute, 兒童姓名: name, 年級 : value, line : li2ne }) .then(function(docRef) { console.log("Document written with ID: ", docRef.id); location.href = `done.html?id=${docRef.id}`; }) .catch(function(error) { console.error("Error adding document: ", error); });
+			}
+		} else {
+
+			document.getElementById("Mess1age").style.color = "Red";
+			   document.getElementById("Mess1age").innerHTML = "這個欄位為必填欄位，請先輸入再發送"
+			
+		}
+		   } else {
+			   document.getElementById("Message").style.color = "Red";
+			   document.getElementById("Message").innerHTML = "這個欄位為必填欄位，請先輸入再發送"
+			}
 		}</script>
   </section>
 

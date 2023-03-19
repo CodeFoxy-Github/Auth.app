@@ -65,14 +65,18 @@
 		 var line = document.getElementById("line");
 		 var li2ne = line.value;
 		 
-		db.collection("users").add({
+		 let check = 1;
+		 if (name !== undefined) {
+        let check = 2;
+		if (value !== undefined) {
+			if (check == 2) {
+		
+				db.collection("users").add({
 		  陪同家長姓名 : adute,
 		  兒童姓名: name,
 		  兒童姓名2 : name2,
-		  兒童姓名3 : name3,
 		  年級 : value,
 		  年級2 : v2alue,
-		  年級3 : v3alue,
 		  line : li2ne
 		})
 		  .then(function(docRef) {
@@ -82,14 +86,26 @@
 		  .catch(function(error) {
 			  console.error("Error adding document: ", error);
 		  });
-		
-		}</script>
+			}
+		} else {
+
+			document.getElementById("Mess1age").style.color = "Red";
+			   document.getElementById("Mess1age").innerHTML = "這個欄位為必填欄位，請先輸入再發送"
+			
+		}
+		   } else {
+			   document.getElementById("Message").style.color = "Red";
+			   document.getElementById("Message").innerHTML = "這個欄位為必填欄位，請先輸入再發送"
+			}
+		}
+		</script>
 
 
 		  <form>
 			<div id=""></div>
 			<div class="inputBox">
 			  <input id="name" type="text" placeholder="兒童姓名">
+			  <h3 id="Message"></h3>
 			</div>
 			<div class="inputBox">
 					<select id="kid1w">
@@ -110,6 +126,7 @@
 							<option value="六年級">六年級</option>
 						</optgroup>
 				</select>
+				<h3 id="Mess1age"></h3>
 			</div>
 			<div class="inputBox">
 				<select id="line">
